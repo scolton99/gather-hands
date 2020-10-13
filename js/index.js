@@ -47,7 +47,7 @@ const load = () => {
     for (const hand of hands)
         already_raised_hands.push(hand);
 
-        window.setInterval(check_hands, 2000);
+    window.setInterval(check_hands, 2000);
 };
 
 load();
