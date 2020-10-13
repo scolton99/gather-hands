@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Gather Hands",
+    "version": "1.0.0",
+    "description": "Plays a tone when a new hand is raised in gather.town.",
+    "author": "Spencer Colton",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://gather.town/app/*"
+            ],
+            "js": ["js/index.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "assets/*"
+    ]
+}
