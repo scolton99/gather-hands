@@ -1,5 +1,5 @@
 const save_options = () => {
-    const options = document.querySelectorAll("input[type='checkbox'");
+    const options = document.querySelectorAll("input[type='checkbox']");
 
     const option_vals = {};
     for (const option of options) {
@@ -16,7 +16,7 @@ const save_options = () => {
 };
 
 const restore_options = () => {
-    const options = document.querySelectorAll("input[type='checkbox'");
+    const options = document.querySelectorAll("input[type='checkbox']");
     
     const vals_to_load = {};
     for (const option of options) {
@@ -25,7 +25,7 @@ const restore_options = () => {
 
     chrome.storage.sync.get(vals_to_load, data => {
         for (const [key, val] of Object.entries(data)) {
-            const dom_el = document.querySelector(`[name='${key}'`);
+            const dom_el = document.querySelector(`[name='${key}']`);
             dom_el.checked = val;
         }
     });

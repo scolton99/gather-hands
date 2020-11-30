@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Gather Hands",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Plays a tone when a new hand is raised or someone enters the room in gather.town.",
     "author": "Spencer Colton",
     "content_scripts": [

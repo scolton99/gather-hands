@@ -3,18 +3,18 @@ const already_in_room = [];
 let should_play_sound = true;
 
 const people_dom = () => {
-    const people = Array.from(document.querySelectorAll("div.GameNamesList div.horizontal-container"));
+    const people = Array.from(document.querySelectorAll("div.LeftBarParticipants-nameRows div.LeftBarParticipantsNameRow-root"));
 
     return people.length === 0 ? null : people;
 };
 
 const to_names = dom => (
-    dom.map(it => it.querySelector("div.GameName-name").textContent)
+    dom.map(it => it.querySelector("p.Text.LeftBarParticipantsNameRow-name").textContent)
 );
 
 const currently_raised_hands = () => {
     const people = people_dom();
-    return people === null ? null : to_names(people.filter(x => x.querySelector("div.GameName-hand-raised") !== null));
+    return people === null ? null : to_names(people.filter(x => x.querySelector("div.LeftBarParticipants-hand-raised") !== null));
 };
 
 const currently_in_room = () => {
